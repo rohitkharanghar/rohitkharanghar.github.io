@@ -1,6 +1,9 @@
 title: Rohit Kharanghar
 description: Engineering notes, personal essays, and what I read.
 
+exclude:
+  - README.md
+
 collections:
   engineering_posts:
     output: true
