@@ -1,0 +1,16 @@
+---
+layout: default
+title: Essays
+---
+
+<section>
+  <h2>Essays</h2>
+  <ul class="entries">
+    {% for post in site.posts %}
+    <li><span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    {% if site.posts.size == 0 %}
+    <li><span class="meta">Coming soon</span><span class="placeholder">Essays will appear here.</span></li>
+    {% endif %}
+  </ul>
+</section>

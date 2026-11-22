@@ -8,38 +8,3 @@ title: Home
   <p>I write about engineering, think out loud in essays, and keep a running list of what I read.</p>
   <p><a href="https://www.linkedin.com/in/rohitkharanghar/">LinkedIn</a> · <a href="https://github.com/rohitkharanghar">GitHub</a></p>
 </section>
-
-<section id="engineering">
-  <h2>Engineering blogs</h2>
-  <ul class="entries">
-    <li><span class="meta">Coming soon</span><span class="placeholder">Add engineering posts here.</span></li>
-  </ul>
-</section>
-
-<section id="essays">
-  <h2>Essays</h2>
-  <ul class="entries">
-    {% for post in site.posts %}
-    <li><span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    {% if site.posts.size == 0 %}
-    <li><span class="meta">Coming soon</span><span class="placeholder">Essays will appear here.</span></li>
-    {% endif %}
-  </ul>
-</section>
-
-<section id="interests">
-  <h2>Interests &amp; reading</h2>
-
-  <h3>Manga &amp; Manhwa</h3>
-  <p class="placeholder">Nothing yet.</p>
-
-  <h3>Engineering</h3>
-  <p class="placeholder">Nothing yet.</p>
-
-  <h3>Personal</h3>
-  <p class="placeholder">Nothing yet.</p>
-
-  <h3>Books</h3>
-  <p class="placeholder">Nothing yet.</p>
-</section>
