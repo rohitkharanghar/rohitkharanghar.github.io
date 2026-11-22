@@ -60,4 +60,4 @@ Open http://localhost:4000.
 ## Notes
 
 - Use quotes around titles that contain `:`.
-- Jekyll is pinned to nothing; GitHub Pages builds the site with its own version.
+- GitHub Pages uses its own Jekyll version, so the local preview may look slightly different.
