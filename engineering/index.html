@@ -5,7 +5,15 @@ title: Engineering blogs
 
 <section>
   <h2>Engineering blogs</h2>
-  <ul class="entries">
-    <li><span class="meta">Coming soon</span><span class="placeholder">Add engineering posts here.</span></li>
-  </ul>
+  {% assign posts = site.engineering_posts | sort: "date" | reverse %}
+  {% for post in posts %}
+  <article class="entry">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+  </article>
+  {% endfor %}
+  {% if posts.size == 0 %}
+  <p class="placeholder">Engineering posts will appear here.</p>
+  {% endif %}
 </section>

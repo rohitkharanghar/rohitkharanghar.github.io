@@ -5,12 +5,14 @@ title: "Notes on Living: Nichijō"
 
 <section>
   <h2>Notes on Living: Nichijō</h2>
-  <ul class="entries">
-    {% for post in site.posts %}
-    <li><span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    {% if site.posts.size == 0 %}
-    <li><span class="meta">Coming soon</span><span class="placeholder">Essays will appear here.</span></li>
-    {% endif %}
-  </ul>
+  {% for post in site.posts %}
+  <article class="entry">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+  </article>
+  {% endfor %}
+  {% if site.posts.size == 0 %}
+  <p class="placeholder">Essays will appear here.</p>
+  {% endif %}
 </section>

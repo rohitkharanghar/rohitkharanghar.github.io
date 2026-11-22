@@ -64,3 +64,8 @@ footer {
 @media (max-width: 600px) {
   .entries li { flex-direction: column; gap: 0; }
 }
+
+.entry { padding: 0.9rem 0; border-bottom: 1px dotted var(--rule); }
+.entry h3 { margin: 0 0 0.2rem; }
+.entry p { margin: 0.2rem 0; }
+.post h1 { font-size: 2rem; margin-bottom: 0.2rem; }
